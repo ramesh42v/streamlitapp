@@ -12,7 +12,7 @@ import streamlit as st
 
 ### Adding title to app
 
-##st.title("Pattern Levelled Production Webapp")
+st.title("Pattern Levelled Production Webapp")
 
 ### Reading Pattern Sheet
 
@@ -113,7 +113,7 @@ for i in range (0,10):
 ### Create a header 
 
 st.header("Levelled Pattern Production Plan")
-st.dataframe(final_df)
+
 
 ### Downloading your pattern file
 
@@ -121,4 +121,5 @@ download=st.button('Download Excel File')
 
 if download:
     final_df.to_excel("pattern_levelled.xlsx")
+st.dataframe(final_df)
 
